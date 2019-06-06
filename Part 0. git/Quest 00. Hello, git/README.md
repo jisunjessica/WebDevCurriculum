@@ -29,13 +29,13 @@
 * git 외의 버전관리 시스템에는 무엇이 있나요? git은 그 시스템과 어떤 점이 다르며, 어떤 장점을 가지고 있나요?
   * git 외의 버전관리 시스템에는 Subversion, Team Foundation Server, Mercurial 등이 있다. Git의 차별점 네 가지는 아래와 같다. 첫 번째, 분산형 모델이라 빠르고 오프라인으로도 작업할 수 있다. 그리고 내 작업은 나만의 작업으로 할 수도 있고 필요하다면 공개도 가능하다. 두 번째, 브랜칭과 병합이 쉽다. 빠르고 공간을 조금만 차지하기 때문에 작업 비용이 저렴해 원할 때는 언제나 브랜치를 만들 수 있고, 내가 만든 기능이나 아이디어를 메인스트림이 준비될 때까지 내 공간에서만 작업할 수 있다. 세 번째, 워크플로우가 유연하다. Git은 나만의 워크플로우를 선택할 수 있게 해주기 때문에 큰 프로젝트에서도 매우 효율적으로 작업할 수 있다. 네 번째, 공짜다.
 * git의 `clone`/`add`/`commit`/`push`/`pull`/`branch`/`stash` 명령은 무엇이며 어떨 때 이용하나요? 그리고 어떻게 사용하나요?
-  * clone은 원격 저장소의 복사본을 로컬에 생성할 때 이용하며, `git clone [url]`로 사용한다.
-  * add는 변경된 파일들을 스테이지할 때 이용하며, `git add [file]`로 사용한다.
+  * clone은 원격 저장소의 복사본을 로컬에 생성할 때 이용하며, `git clone [url]`로 사용한다. https 프로토콜로 clone하면 매번 github의 아이디와 비밀번호를 물어보기 때문에 git@ 프로토콜로 clone하도록 하자.
+  * add는 변경된 파일들을 스테이지할 때 이용하며, `git add [file]`로 사용한다. [file]에 "."를 입력하면 하위 폴더 내의 모든 파일을 인덱스에 등록할 수 있다.
   * commit은 변경내역을 저장할 때 이용하며, `git commit -m "[descriptive message]"`로 사용한다.
-  * push는 로컬로 만들어진 모든 commit을 원격 저장소에 업데이트할 때 이용하며, `git push [remote] [branch]`로 사용한다. push의 반대는 fetch다.
+  * push는 로컬로 만들어진 모든 commit을 원격 저장소에 업데이트할 때 이용하며, `git push [remote] [branch]`로 사용한다. 보통 내 원격(remote) 저장소는 origin으로 세팅된다. push의 반대는 fetch이며, fetch는 원격 저장소에는 있으나 로컬에는 없는 뒷 커밋들을 다운로드하되 현재 변경점에 변화를 주지 않는다고 한다. fetch하고난 후에는 다른 커밋들처럼 cherry-pick, rebase, merge 등을 할 수 있다. `git pull --rebase`를 하면 fetch와 rebase를 하는 작업의 줄임 명령어다.
   * pull은 다른 브랜치의 변경점을 현재 브랜치에 업데이트하고 싶을 때 이용하며, fetch와 merge가 한번에 이루어지는 개념이다. `git pull`로 사용한다.
-  * branch는 commit 시리즈의 이름을 설정할 때 이용하며, `git branch [branch-name]`로 사용한다.  
-  * stash는 불완전한 변경 사항을 보류하고 스테이지하기 전의 상태로 복원시키고 싶을 이용하며, `git stash`로 사용한다.
+  * branch는 commit 시리즈의 이름을 설정할 때 이용하며, branch를 새로 만들 때에는`git branch [branch-name]` 명령어를 사용한다.  
+  * stash는 불완전한 변경 사항을 보류하고 스테이지하기 전의 상태로 복원시키고 싶을 때 이용하며, `git stash`로 사용한다.
 
 
 ## Quest
