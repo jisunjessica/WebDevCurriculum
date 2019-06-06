@@ -31,7 +31,7 @@
 * git의 `clone`/`add`/`commit`/`push`/`pull`/`branch`/`stash` 명령은 무엇이며 어떨 때 이용하나요? 그리고 어떻게 사용하나요?
   * clone은 원격 저장소의 복사본을 로컬에 생성할 때 이용하며, `git clone [url]`로 사용한다. https 프로토콜로 clone하면 매번 github의 아이디와 비밀번호를 물어보기 때문에 git@ 프로토콜로 clone하도록 하자.
   * add는 변경된 파일들을 스테이지할 때 이용하며, `git add [file]`로 사용한다. [file]에 "."를 입력하면 하위 폴더 내의 모든 파일을 인덱스에 등록할 수 있다.
-  * commit은 변경내역을 저장할 때 이용하며, `git commit -m "[descriptive message]"`로 사용한다.
+  * commit은 변경내역을 저장할 때 이용하며, `git commit -m "[descriptive message]"`로 사용한다. `-m` 대신 `-am`를 쓸 수 있는데, 여기서 `-a`는 unstaged만 넣고 untracked는 넣지 않는 옵션이다. 이것은 스테이징과 커밋을 동시에 하는 옵션이라 보통 편하게 많이들 쓰는 옵션이다. 의도치 않게 들어가는걸 막으려면 untracked 파일들은 수동으로 직접 add해주는게 좋다. 보통 .gitignore 파일에 넣어 untracked에 잡히지 않게 하거나 한다.
   * push는 로컬로 만들어진 모든 commit을 원격 저장소에 업데이트할 때 이용하며, `git push [remote] [branch]`로 사용한다. 보통 내 원격(remote) 저장소는 origin으로 세팅된다. push의 반대는 fetch이며, fetch는 원격 저장소에는 있으나 로컬에는 없는 뒷 커밋들을 다운로드하되 현재 변경점에 변화를 주지 않는다고 한다. fetch하고난 후에는 다른 커밋들처럼 cherry-pick, rebase, merge 등을 할 수 있다. `git pull --rebase`를 하면 fetch와 rebase를 하는 작업의 줄임 명령어다.
   * pull은 다른 브랜치의 변경점을 현재 브랜치에 업데이트하고 싶을 때 이용하며, fetch와 merge가 한번에 이루어지는 개념이다. `git pull`로 사용한다.
   * branch는 commit 시리즈의 이름을 설정할 때 이용하며, branch를 새로 만들 때에는`git branch [branch-name]` 명령어를 사용한다.  
