@@ -2,120 +2,187 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Home</title>
+		<title>WebDevCurriculum - Github</title>
+		<link href="style.css" rel="stylesheet">
 		<!-- TODO: 또 무엇이 필요할까요? -->
 	</head>
 	<body>
 		<header>
 			<!-- TODO: 상단의 회색 부분은 어떻게 처리하면 좋을까요? -->
+			<div class="github-logo"></div>
 			<div class="search-form">
-
+				<select class="repository-select">
+					<option value="this" selected>This repository</option>
+				</select>
+				<input type="search" placeholder="search">
 			</div>
-			<ul>
-				<li><a href="">Pull requests</a></li>
-				<li><a href="">Issues</a></li>
-				<li><a href="">Marketplace</a></li>
-				<li><a href="">Explore</a></li>
-			</ul>
-			<ul>
-				<li><a href="" alt="notification"></a></li>
-				<li><a href="" alt="more"></a></li>
-				<li><a href="" alt="user profile"></a></li>
-			</ul>
+
+			<nav class="topnav-left">
+				<ul>
+					<li><a href="">Pull requests</a></li>
+					<li><a href="">Issues</a></li>
+					<li><a href="">Marketplace</a></li>
+					<li><a href="">Explore</a></li>
+				</ul>
+			</nav>
+
+			<nav class="topnav-right">
+				<ul>
+					<li>
+						<a href="" alt="notification">
+							<div class="icon notification"></div>
+						</a>
+					</li>
+					<li>
+						<a href="" alt="more">
+							<div class="icon plus"></div>
+						</a>
+					</li>
+					<li>
+						<a href="" alt="user profile">
+							<div class="img-profile"></div>
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 
 		<section class="main">
 			<header class="main-header">
 				<!-- TODO: 메인의 헤더 부분 -->
+				<div class="icon repository"></div>
 				<h2><span>KnowRe</span>/<span>WebDevCurriculum</span></h2>
-				<button type="button" name="button">Unwatch</button>
-				<button type="button" name="button">Star</button>
-				<button type="button" name="button">Fork</button>
-				<ul>
-					<li><a href="" alt="">Code</a></li>
-					<li><a href="" alt="">Issues</a></li>
-					<li><a href="" alt="">Pull requests</a></li>
-					<li><a href="" alt="">Projects</a></li>
-					<li><a href="" alt="">Insights</a></li>
-				</ul>
+				<div class="button-group-right">
+					<button type="button" name="button">
+						<div class="icon eye"></div>Unwatch
+					</button>
+					<div class="button-badge"></div>
+					<button type="button" name="button">
+						<div class="icon star"></div>Star
+					</button>
+					<div class="button-badge"></div>
+					<button type="button" name="button">
+						<div class="icon fork"></div>Fork
+					</button>
+					<div class="button-badge"></div>
+				</div>
+
+				<nav class="tab-nav">
+					<ul>
+						<li>
+							<a href="" alt="">
+								<div class="icon code"></div>Code
+								<div class="tab-menu-badge"></div>
+							</a>
+						</li>
+						<li>
+							<a href="" alt="">
+								<div class="icon issue"></div>Issues
+								<div class="tab-menu-badge"></div>
+							</a>
+						</li>
+						<li>
+							<a href="" alt="">
+								<div class="icon pr"></div>Pull requests
+								<div class="tab-menu-badge"></div>
+							</a>
+						</li>
+						<li>
+							<a href="" alt="">
+								<div class="icon project"></div>Projects
+								<div class="tab-menu-badge"></div>
+							</a>
+						</li>
+						<li>
+							<a href="" alt="">
+								<div class="icon insight"></div>Insights
+								<div class="tab-menu-badge"></div>
+							</a>
+						</li>
+					</ul>
+				</nav>
 			</header>
 
 			<section class="main-detail">
 				<!-- TODO: 메인의 부분 -->
-				<div class="reposi-description">
+				<div class="repository-description">
 					<p>KnowRe web development curriculum for noobs</p>
 				</div>
 				<div class="menu-group">
 					<ul>
-					 <li><a href="" alt="">44 commits</a></li>
-					 <li><a href="" alt="">1 branch</a></li>
-					 <li><a href="" alt="">0 releases</a></li>
-					 <li><a href="" alt="">2 contributors</a></li>
-					 <li><a href="" alt="">MIT</a></li>
-				 </ul>
+						 <li><a href="" alt=""><div class="icon commit"></div>44 commits</a></li>
+						 <li><a href="" alt=""><div class="icon branch"></div>1 branch</a></li>
+						 <li><a href="" alt=""><div class="icon release"></div>0 releases</a></li>
+						 <li><a href="" alt=""><div class="icon contributor"></div>2 contributors</a></li>
+						 <li><a href="" alt=""><div class="icon license"></div>MIT</a></li>
+				  </ul>
+					<div class="code-composition-info"></div>
 				</div>
-				<div class="control-group">
+				<div class="code-control-group">
 					<select class="" name="">
-						master
+						<option value="master" selected>Branch: master</option>
 					</select>
 					<button type="button" name="button">New pull request</button>
-					<div class="button-group">
+					<div class="button-group-right">
 						<button type="button" name="button">Create new file</button>
 						<button type="button" name="button">Upload files</button>
 						<button type="button" name="button">Find file</button>
 					</div>
-					<button type="button" name="button">Clone or download</button>
+					<button type="button" name="button" class="btn-primary">Clone or download</button>
 				</div>
 
-				<table class="">
+				<table class="directory">
 					<thead>
 						<tr>
 							<th>
-								KnowRe Quest 02 added constraint
-								Latest commit 8a3080e on 7 Aug 2016
+								<div class="img-user-profile"></div>
+								<strong>KnowRe</storng> Quest 02 added constraint
+								<span class="time">
+									Latest commit 8a3080e on 7 Aug 2016
+								</span>
 							</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>
+							<th>
 								Part 0. git/Quest 00. Hello, git
-							</td>
+							</th>
 							<td>
 								Part 2 finished
 							</td>
-							<td>
+							<td class="time">
 								2 years ago
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<th>
 								Part 1. HTML & CSS
-							</td>
+							</th>
 							<td>
 								Quest 02 added constraint
 							</td>
-							<td>
+							<td class="time">
 								2 years ago
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<th>
 								README.md
-							</td>
+							</th>
 							<td>
 								Fix: Removed advertisement
 							</td>
-							<td>
+							<td class="time">
 								2 years ago
 							</td>
 						</tr>
 					</tbody>
 				</table>
 
-				<div class="">
+				<div class="readme-contents-group">
 					<div class="title">
-						README.md
+						<div class="icon markdown-doc"></div>README.md
 					</div>
 					<div class="content">
 						<h1>KnowRe web development curriculum 2018</h1>
@@ -123,24 +190,23 @@
 					</div>
 				</div>
 			</section>
-		</section>
 
 		<footer>
 			<!-- TODO: 하단의 Copyright, Terms, Privacy 등은 어떻게 처리하면 좋을까요? -->
-			<div class="left">
+			<div class="footer-left">
 				<span>2018 GitHub, Inc.</span>
-				<ul>
-					<li><a href="">Terms</a></li>
-					<li><a href="">Privacy</a></li>
-					<li><a href="">Security</a></li>
-					<li><a href="">Status</a></li>
-					<li><a href="">Help</a></li>
-				</ul>
+				<nav>
+					<ul>
+						<li><a href="">Terms</a></li>
+						<li><a href="">Privacy</a></li>
+						<li><a href="">Security</a></li>
+						<li><a href="">Status</a></li>
+						<li><a href="">Help</a></li>
+					</ul>
+				</nav>
 			</div>
-			<div class="center">
-				<img alt="github logo" src="" />
-			</div>
-			<div class="right">
+			<img alt="github logo" src="" />
+			<div class="footer-right">
 				<ul>
 					<li><a href="">Contact GitHub</a></li>
 					<li><a href="">API</a></li>
